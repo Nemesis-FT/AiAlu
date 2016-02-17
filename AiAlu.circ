@@ -57,6 +57,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </tool>
     <sep/>
     <tool lib="0" name="Pin">
+      <a name="width" val="8"/>
       <a name="tristate" val="false"/>
     </tool>
     <tool lib="0" name="Pin">
@@ -73,5 +74,84 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
+  </circuit>
+  <circuit name="and8bit">
+    <a name="circuit" val="and8bit"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(130,140)" to="(270,140)"/>
+    <wire from="(130,180)" to="(270,180)"/>
+    <wire from="(340,160)" to="(410,160)"/>
+    <comp lib="1" loc="(340,160)" name="AND Gate">
+      <a name="width" val="8"/>
+      <a name="size" val="70"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(410,160)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="label" val="yand"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(130,140)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="aand"/>
+    </comp>
+    <comp lib="0" loc="(130,180)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="band"/>
+    </comp>
+  </circuit>
+  <circuit name="or8bit">
+    <a name="circuit" val="or8bit"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(320,160)" to="(400,160)"/>
+    <wire from="(150,180)" to="(250,180)"/>
+    <wire from="(150,140)" to="(250,140)"/>
+    <comp lib="0" loc="(150,180)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="bor"/>
+    </comp>
+    <comp lib="1" loc="(320,160)" name="OR Gate">
+      <a name="width" val="8"/>
+      <a name="size" val="70"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(150,140)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="aor"/>
+    </comp>
+    <comp lib="0" loc="(400,160)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="label" val="yor"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+  </circuit>
+  <circuit name="not8bit">
+    <a name="circuit" val="not8bit"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <comp lib="0" loc="(100,140)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="1" loc="(220,170)" name="NOT Gate">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(100,200)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+    </comp>
   </circuit>
 </project>
